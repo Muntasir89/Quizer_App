@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../res/colors/AppColor.dart';
+import '../../../res/colors/AppColor.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({super.key});
