@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:quizer/res/colors/AppColor.dart';
 
@@ -23,9 +25,12 @@ class EditText extends StatelessWidget {
           focusedBorder: Border(),
           enabledBorder: Border(),
           labelText: label,
-          labelStyle: TextStyle(color: AppColor.whiteColor)),
+          labelStyle: TextStyle(color: AppColor.whiteColor),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 12.0, horizontal: 25)),
       textAlign: TextAlign.start,
       cursorColor: AppColor.whiteColor,
+      style: const TextStyle(color: AppColor.whiteColor, fontSize: 17),
     );
   }
 

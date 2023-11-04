@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/assets/AppAssets.dart';
-import 'package:quizer/res/colors/AppColor.dart';
-import 'package:quizer/res/constants.dart';
-import 'package:quizer/res/routes/route_names.dart';
-import 'package:quizer/view/universal_widgets/button.dart';
-import 'package:quizer/view/universal_widgets/edit_text.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+import '../../res/assets/AppAssets.dart';
+import '../../res/colors/AppColor.dart';
+import '../../res/constants.dart';
+import '../../res/routes/route_names.dart';
+import '../universal_widgets/button.dart';
+import '../universal_widgets/edit_text.dart';
+
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController _emailController = TextEditingController();
-    final TextEditingController _passwordController = TextEditingController();
-    return SafeArea(
-        child: Scaffold(
+    final _nameController = TextEditingController();
+    final _emailController = TextEditingController();
+    final _passwordController = TextEditingController();
+    final _confirmPassController = TextEditingController();
+    final _mobileNoController = TextEditingController();
+    return Scaffold(
       body: Container(
         height: h,
         width: w,
@@ -26,7 +29,6 @@ class LoginScreen extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)),
         child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
           child: Column(
             children: [
               ClipPath(
@@ -39,10 +41,16 @@ class LoginScreen extends StatelessWidget {
               ),
               Container(
                 width: w * 0.8,
-                height: h * 0.4,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    EditText(
+                        controller: _nameController,
+                        textType: 0,
+                        label: "Name"),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     EditText(
                         controller: _emailController,
                         textType: 1,
@@ -55,46 +63,34 @@ class LoginScreen extends StatelessWidget {
                         textType: 2,
                         label: "Password"),
                     const SizedBox(
+                      height: 10,
+                    ),
+                    EditText(
+                        controller: _confirmPassController,
+                        textType: 2,
+                        label: "Confirm Password"),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    EditText(
+                        controller: _mobileNoController,
+                        textType: 3,
+                        label: "Mobile No"),
+                    const SizedBox(
                       height: 40,
                     ),
-                    Button(
-                      title: "Login",
-                    )
+                    Button(title: "Sign Up")
                   ],
                 ),
               ),
-              Text(
-                "or",
-                style: TextStyle(color: AppColor.whiteColor),
-              ),
-              SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    AppAssets.google,
-                    height: 50,
-                    width: 50,
-                  ),
-                  SizedBox(width: 50),
-                  IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      AppAssets.github,
-                      height: 50,
-                      width: 50,
-                    ),
-                  ),
-                ],
-              ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "No Account?",
+                    "Already has an Account?",
                     style: TextStyle(color: AppColor.whiteColor),
                   ),
                   const SizedBox(
@@ -102,10 +98,10 @@ class LoginScreen extends StatelessWidget {
                   ),
                   TextButton(
                       onPressed: () {
-                        Get.offNamed(RouteName.signupPage);
+                        Get.offNamed(RouteName.loginPage);
                       },
                       child: Text(
-                        "Sign Up",
+                        "Login",
                         style: TextStyle(color: AppColor.redColor),
                       ))
                 ],
@@ -114,7 +110,7 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
       ),
-    ));
+    );
   }
 }
 
