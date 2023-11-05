@@ -1,11 +1,14 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:quizer/res/assets/AppAssets.dart';
 import 'package:quizer/res/colors/AppColor.dart';
 import 'package:quizer/view/home_screen/widgets/header_quiz/viewAllBtn.dart';
 import 'package:quizer/view/home_screen/widgets/quiz_list.dart';
 import 'package:quizer/view/home_screen/widgets/subject_drop_down/subject_drop_down.dart';
+import 'package:quizer/view_model/home/bottomNavController/bottomNavController.dart';
 
 import '../../res/constants.dart';
 import 'widgets/header_quiz/header_title.dart';
@@ -16,6 +19,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       backgroundColor: Colors.white,
       drawer: Drawer(),
       appBar: PreferredSize(
@@ -36,6 +40,39 @@ class HomeScreen extends StatelessWidget {
                   )),
             )
           ],
+        ),
+      ),
+      bottomNavigationBar: Obx(
+        () => CurvedNavigationBar(
+          backgroundColor: Colors.transparent,
+          color: AppColor.whiteColor,
+          height: 65.h,
+          items: <Widget>[
+            Icon(
+              Icons.home,
+              size: 30,
+              color: (Get.find<BottomNavController>().selectedIndex.value) == 0
+                  ? AppColor.primaryButtonColor
+                  : AppColor.secondaryTextColor,
+            ),
+            Icon(
+              Icons.leaderboard,
+              size: 30,
+              color: (Get.find<BottomNavController>().selectedIndex.value) == 1
+                  ? AppColor.primaryButtonColor
+                  : AppColor.secondaryTextColor,
+            ),
+            Icon(
+              Icons.person,
+              size: 30,
+              color: (Get.find<BottomNavController>().selectedIndex.value) == 2
+                  ? AppColor.primaryButtonColor
+                  : AppColor.secondaryTextColor,
+            ),
+          ],
+          onTap: (index) {
+            Get.find<BottomNavController>().onBottomNavItemTapped(index);
+          },
         ),
       ),
       body: Container(

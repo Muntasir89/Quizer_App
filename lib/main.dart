@@ -7,7 +7,6 @@ import 'package:quizer/view_model/all_bindings.dart';
 
 import 'res/getx_localization/language.dart';
 import 'res/routes/routes.dart';
-import 'view/splash_screen/splash_screen.dart';
 
 void main() async {
   await GetStorage.init();
