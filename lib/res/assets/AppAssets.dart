@@ -5,6 +5,7 @@ class AppAssets {
   static const String google = "assets/images/google.svg";
   static const String github = "assets/images/github.svg";
   static const String profile = "assets/images/profile.svg";
+  static const String upcoming = "assets/images/upcoming.png";
 
   static const String bg = "assets/images/bg.png";
 }

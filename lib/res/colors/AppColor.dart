@@ -1,8 +1,11 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppColor {
   static const Color blackColor = Color(0xff000000);
-  static const Color whiteColor = Color(0xffffffff);
+  static const Color whiteColor = Colors.white;
+  static Color whiteColor_50 = Colors.white.withOpacity(0.5);
 
   static const Color primaryColor = Color(0xff0E21A0);
   static const Color backgroundTopCenter = Color(0xbb9D44C0);

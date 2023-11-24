@@ -3,10 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:quizer/res/assets/AppAssets.dart';
 import 'package:quizer/res/colors/AppColor.dart';
-import 'package:quizer/res/constants.dart';
+import 'package:quizer/res/values/app_values.dart';
 import 'package:quizer/res/routes/route_names.dart';
-import 'package:quizer/view/universal_widgets/button.dart';
-import 'package:quizer/view/universal_widgets/edit_text.dart';
+import 'package:quizer/view/common_widgets/button.dart';
+import 'package:quizer/view/common_widgets/edit_text.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

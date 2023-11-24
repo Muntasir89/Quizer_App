@@ -5,7 +5,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quizer/view_model/all_bindings.dart';
 
-import 'res/getx_localization/language.dart';
+import 'res/languages/language.dart';
 import 'res/routes/routes.dart';
 
 void main() async {
@@ -35,16 +35,19 @@ class MyApp extends StatelessWidget {
           locale: Locale('en', 'US'),
           fallbackLocale: Locale('en', 'US'),
           theme: ThemeData(
-              brightness: Brightness.light,
-              appBarTheme: AppBarTheme(
-                  centerTitle: true,
-                  titleTextStyle: TextStyle(fontSize: 27.sp)),
-              fontFamily: GoogleFonts.poppins().fontFamily),
+            brightness: Brightness.light,
+            appBarTheme: AppBarTheme(
+              centerTitle: true,
+              titleTextStyle: TextStyle(fontSize: 27.sp),
+            ),
+            fontFamily: GoogleFonts.poppins().fontFamily,
+          ),
           darkTheme: ThemeData(
               brightness: Brightness.dark,
               appBarTheme: AppBarTheme(
-                  centerTitle: true,
-                  titleTextStyle: TextStyle(fontSize: 27.sp)),
+                centerTitle: true,
+                titleTextStyle: TextStyle(fontSize: 27.sp),
+              ),
               fontFamily: GoogleFonts.poppins().fontFamily),
           getPages: AppRoutes.appRoutes(),
         );

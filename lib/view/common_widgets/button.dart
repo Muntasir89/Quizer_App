@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:quizer/res/routes/route_names.dart';
 
 import '../../res/colors/AppColor.dart';
-import '../../res/constants.dart';
+import '../../res/values/app_values.dart';
 
 class Button extends StatefulWidget {
   final title;

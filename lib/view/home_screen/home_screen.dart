@@ -7,10 +7,12 @@ import 'package:quizer/res/assets/AppAssets.dart';
 import 'package:quizer/res/colors/AppColor.dart';
 import 'package:quizer/view/home_screen/widgets/header_quiz/viewAllBtn.dart';
 import 'package:quizer/view/home_screen/widgets/quiz_list.dart';
-import 'package:quizer/view/home_screen/widgets/subject_drop_down/subject_drop_down.dart';
+import 'package:quizer/view/home_screen/widgets/subject_drop_down/subject_dd_body.dart';
+import 'package:quizer/view/home_screen/widgets/subject_drop_down/subject_head.dart';
 import 'package:quizer/view_model/home/bottomNavController/bottomNavController.dart';
 
-import '../../res/constants.dart';
+import '../../res/values/app_values.dart';
+import 'widgets/filterable_list_item/filterable_list_item.dart';
 import 'widgets/header_quiz/header_title.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -109,9 +111,26 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SubjectDropDown(),
+                SubjectHead(),
                 ViewAllBtn(string: "View All", onPressed: upcomingViewAll),
               ],
+            ),
+            SubjectDropDownBody(),
+            Expanded(
+              child: SizedBox(
+                child: ListView.builder(
+                  itemCount: 10,
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: ((context, index) {
+                    return FilterableListItem(
+                      quizTitle: "Weekly Quiz",
+                      subject: "Java",
+                      time: "6:30 PM",
+                      Date: "Mon, 6 Nov 23",
+                    );
+                  }),
+                ),
+              ),
             ),
           ],
         ),

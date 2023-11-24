@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 
 import '../../res/assets/AppAssets.dart';
 import '../../res/colors/AppColor.dart';
-import '../../res/constants.dart';
+import '../../res/values/app_values.dart';
 import '../../res/routes/route_names.dart';
-import '../universal_widgets/button.dart';
-import '../universal_widgets/edit_text.dart';
+import '../common_widgets/button.dart';
+import '../common_widgets/edit_text.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

@@ -6,4 +6,8 @@ class RouteName {
   static const String signupPage = '/signupPage';
 
   static const String homePage = '/homePage';
+
+  static const String quizDetailsPage = '/quizDetailsPage';
+
+  static const String quizPage = '/quizPage';
 }
