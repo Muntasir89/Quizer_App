@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:quizer/view/home_screen/home_screen.dart';
 import 'package:quizer/view/landing_page/landing_page.dart';
 import 'package:quizer/view/quiz_details_page/quiz_details_page.dart';
-import 'package:quizer/view/quiz_sceen/quiz_sceen.dart';
+import 'package:quizer/view/quiz_sceen/view/quiz_sceen.dart';
 import 'package:quizer/view/signup_screen/signup_screen.dart';
 
 import '../../view/login_screen/login_screen.dart';
