@@ -67,8 +67,9 @@ class QuizPage extends StatelessWidget {
                 // For ⬇️ progressbar decoration
                 return DecoratedBox(
                   decoration: BoxDecoration(
-                      color: AppColor.whiteColor,
-                      borderRadius: BorderRadius.circular(r10)),
+                    color: AppColor.whiteColor,
+                    borderRadius: BorderRadius.circular(r10),
+                  ),
                   child: GetBuilder<QuizController>(
                     builder: (controller) {
                       // ⬇️ progressbar

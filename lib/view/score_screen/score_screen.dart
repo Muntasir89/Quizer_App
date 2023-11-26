@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quizer/res/colors/AppColor.dart';
+import 'package:quizer/res/routes/route_names.dart';
 import 'package:quizer/res/values/text_style.dart';
 import 'package:quizer/view/score_screen/widgets/score_box.dart';
 
@@ -136,7 +137,9 @@ class ScorePage extends StatelessWidget {
                 ),
                 gap_h10,
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(RouteName.leaderboardPage);
+                  },
                   child: Text(
                     "Leaderboard",
                     style: style_green_w500_13,

@@ -39,14 +39,14 @@ class QuizDetailsPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: AppColor.whiteColor,
                   borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(r20),
-                    bottomRight: Radius.circular(r20),
+                    bottomLeft: Radius.circular(r30),
+                    bottomRight: Radius.circular(r30),
                   ),
                 ),
                 child: Padding(
                   padding: only_l20_r20_b20,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(r20),
+                    borderRadius: BorderRadius.circular(r30),
                     child: Image.asset(
                       'assets/images/upcoming.png',
                       fit: BoxFit.cover,

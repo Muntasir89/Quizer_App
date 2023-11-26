@@ -15,13 +15,17 @@ const only_l20_r20_b20 = EdgeInsets.only(left: 20, right: 20, bottom: 20);
 const only_b10 = EdgeInsets.only(bottom: 10);
 const only_l30_r30_t20 = EdgeInsets.only(left: 30, right: 30, top: 20);
 // const only_l30_r30_t20 = EdgeInsets.only(left: 30, right: 30, top: 20);
+const only_l30 = EdgeInsets.only(left: 30);
+const only_t25 = EdgeInsets.only(top: 25);
+const only_t55 = EdgeInsets.only(top: 55);
 const only_r20 = EdgeInsets.only(right: 20);
 // Radius
 const double r5 = 5;
 const double r10 = 10;
 const double r12 = 12;
 const double r15 = 15;
-const double r20 = 30;
+const double r25 = 25;
+const double r30 = 30;
 
 // gap
 const gap_v5 = SizedBox(height: 5);
@@ -32,3 +36,15 @@ const gap_v40 = SizedBox(height: 40);
 
 const gap_h5 = SizedBox(width: 5);
 const gap_h10 = SizedBox(width: 10);
+
+// width
+const double w50 = 50;
+const double w60 = 60;
+const double w70 = 70;
+const double w80 = 80;
+
+// height
+const double h50 = 50;
+const double h60 = 60;
+const double h120 = 120;
+const double h150 = 150;
