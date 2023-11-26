@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quizer/res/routes/route_names.dart';
 
 class QuizController extends GetxController
     with GetSingleTickerProviderStateMixin {
@@ -9,8 +10,9 @@ class QuizController extends GetxController
   late PageController _pageController;
   PageController get pageController => this._pageController;
 
-  // List<Question> _questions =
-  final duration = RxInt(10);
+  final qustions = RxInt(10);
+  final qustionsNo = RxInt(1);
+  final duration = RxInt(2);
 
   @override
   void onInit() {
@@ -35,14 +37,19 @@ class QuizController extends GetxController
   void nextQuestion() {
     // Reset the counter
     print("next Question starts");
-    _animationController.reset();
-    _pageController.nextPage(
-      duration: Duration(seconds: 1),
-      curve: Curves.linear,
-    );
-    _animationController.forward().whenComplete(() {
-      nextQuestion();
-    });
+    if (qustionsNo.value < qustions.value) {
+      _animationController.reset();
+      _pageController.nextPage(
+        duration: Duration(seconds: 1),
+        curve: Curves.linear,
+      );
+      qustionsNo.value++;
+      _animationController.forward().whenComplete(() {
+        nextQuestion();
+      });
+    } else {
+      Get.offNamed(RouteName.scorePage);
+    }
   }
 
   // // called just before the Controller is deleted from memory

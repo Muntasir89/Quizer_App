@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quizer/res/colors/AppColor.dart';
 import 'package:quizer/res/values/text_style.dart';
-import 'package:quizer/view/quiz_sceen/widgets/options.dart';
+import 'package:quizer/view/quiz_screen/widgets/options.dart';
 import 'package:quizer/view_model/quiz/quiz_controller.dart';
 
 import '../../res/assets/AppAssets.dart';
@@ -88,7 +88,7 @@ class QuizPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "2/10",
+                    "${controller.qustionsNo.value} /10",
                     style: style_white_bold_18,
                   ),
                   Text(
@@ -103,15 +103,16 @@ class QuizPage extends StatelessWidget {
               child: PageView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 controller: controller.pageController,
-                itemCount: 10,
+                itemCount: controller.qustions.value,
                 itemBuilder: (context, index) {
                   return SingleChildScrollView(
                     child: Column(
                       children: [
                         Text(
-                          "$index) Which type of JavaScript language is ___?",
+                          "${controller.qustionsNo.value}) Which type of JavaScript language is ___?",
                           style: style_white_w500_15,
                         ),
+                        gap_v10,
                         DecoratedBox(
                           decoration: BoxDecoration(
                               color: AppColor.whiteColor,

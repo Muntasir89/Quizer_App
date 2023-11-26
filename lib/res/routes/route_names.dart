@@ -10,4 +10,6 @@ class RouteName {
   static const String quizDetailsPage = '/quizDetailsPage';
 
   static const String quizPage = '/quizPage';
+
+  static const String scorePage = '/ScorePage';
 }
