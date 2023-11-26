@@ -7,7 +7,7 @@ class AllBindings extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<SubjectDropDownController>(() => SubjectDropDownController());
-    Get.lazyPut<QuizController>(() => QuizController());
+    Get.lazyPut<QuizController>(() => QuizController(), fenix: true);
     Get.lazyPut<BottomNavController>(() => BottomNavController());
   }
 }

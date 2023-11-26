@@ -32,20 +32,24 @@ class QuizController extends GetxController
     super.onInit();
   }
 
+  void nextQuestion() {
+    // Reset the counter
+    print("next Question starts");
+    _animationController.reset();
+    _pageController.nextPage(
+      duration: Duration(seconds: 1),
+      curve: Curves.linear,
+    );
+    _animationController.forward().whenComplete(() {
+      nextQuestion();
+    });
+  }
+
   // // called just before the Controller is deleted from memory
   @override
   void onClose() {
     _animationController.dispose();
     _pageController.dispose();
     super.onClose();
-  }
-
-  void nextQuestion() {
-    // Reset the counter
-    print("next Question starts");
-    _animationController.reset();
-    _animationController.forward().whenComplete(() {
-      nextQuestion();
-    });
   }
 }
