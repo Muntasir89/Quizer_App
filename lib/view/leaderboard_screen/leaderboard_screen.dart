@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:quizer/res/colors/AppColor.dart';
 import 'package:quizer/res/values/app_values.dart';
 import 'package:quizer/view/leaderboard_screen/widgets/first_board.dart';
+import 'package:quizer/view/leaderboard_screen/widgets/ranking_list.dart';
 import 'package:quizer/view/leaderboard_screen/widgets/second_third_board.dart';
 
 import '../../res/assets/AppAssets.dart';
@@ -25,6 +26,7 @@ class LeaderboardScreen extends StatelessWidget {
           ),
         ),
         child: Column(
+          mainAxisSize: MainAxisSize.max,
           children: [
             AppBar(
               backgroundColor: Colors.transparent,
@@ -46,27 +48,13 @@ class LeaderboardScreen extends StatelessWidget {
               ),
             ),
             gap_v20,
-            Stack(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    SecondThirdBoard(),
-                    FirstBoard(),
-                    SecondThirdBoard()
-                  ],
-                ),
-              ],
+            Expanded(
+              child: RankingList(),
             ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                width: double.infinity,
-                height: 300,
-                color: AppColor.whiteColor,
-              ),
-            )
+            // Align(
+            //   alignment: Alignment.bottomCenter,
+            //   child:
+            // )
           ],
         ),
       ),

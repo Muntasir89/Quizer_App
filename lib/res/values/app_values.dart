@@ -11,13 +11,18 @@ const symmetric_h15 = EdgeInsets.symmetric(horizontal: 15);
 const symmetric_h20 = EdgeInsets.symmetric(horizontal: 20);
 const symmetric_h22_v2 = EdgeInsets.symmetric(horizontal: 22, vertical: 2);
 const symmetric_h25 = EdgeInsets.symmetric(horizontal: 25);
+const symmetric_h25_v10 = EdgeInsets.symmetric(horizontal: 25, vertical: 10);
+
+const only_l30_r30_t40 = EdgeInsets.only(left: 30, right: 30, top: 40);
+const only_l30_r30_t20 = EdgeInsets.only(left: 30, right: 30, top: 20);
+
 const only_l20_r20_b20 = EdgeInsets.only(left: 20, right: 20, bottom: 20);
 const only_b10 = EdgeInsets.only(bottom: 10);
-const only_l30_r30_t20 = EdgeInsets.only(left: 30, right: 30, top: 20);
 // const only_l30_r30_t20 = EdgeInsets.only(left: 30, right: 30, top: 20);
 const only_l30 = EdgeInsets.only(left: 30);
 const only_t25 = EdgeInsets.only(top: 25);
 const only_t55 = EdgeInsets.only(top: 55);
+const only_t150 = EdgeInsets.only(top: 150);
 const only_r20 = EdgeInsets.only(right: 20);
 // Radius
 const double r5 = 5;

@@ -19,6 +19,18 @@ const style_green_w500_13 = TextStyle(
   fontSize: 13,
 );
 
+const style_black_w400_13 = TextStyle(
+  color: AppColor.primaryTextColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 13,
+);
+
+const style_green_w600_15 = TextStyle(
+  color: AppColor.primaryButtonColor,
+  fontWeight: FontWeight.w600,
+  fontSize: 15,
+);
+
 const style_grey_w500_15 = TextStyle(
   color: AppColor.secondaryTextColor,
   fontWeight: FontWeight.w500,
@@ -37,12 +49,6 @@ const style_white_w500_15 = TextStyle(
   fontSize: 15,
 );
 
-const style_white_bold_18 = TextStyle(
-  color: AppColor.whiteColor,
-  fontWeight: FontWeight.bold,
-  fontSize: 18,
-);
-
 const style_black_w500_15 = TextStyle(
   color: AppColor.primaryTextColor,
   fontWeight: FontWeight.w500,
@@ -53,6 +59,17 @@ const style_black_w600_15 = TextStyle(
   color: AppColor.primaryTextColor,
   fontWeight: FontWeight.w600,
   fontSize: 15,
+);
+
+const style_white_bold_18 = TextStyle(
+  color: AppColor.whiteColor,
+  fontWeight: FontWeight.bold,
+  fontSize: 18,
+);
+const style_black_w500_18 = TextStyle(
+  color: AppColor.primaryTextColor,
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
 );
 
 const style_white_bold_20 = TextStyle(
