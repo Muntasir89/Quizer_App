@@ -5,8 +5,6 @@ import 'package:quizer/core/routes/routes.dart';
 import 'package:quizer/view_model/all_bindings.dart';
 
 void main() async {
-  await GetStorage.init();
-  AllBindings().dependencies();
   runApp(const MyApp());
 }
 

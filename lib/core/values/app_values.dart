@@ -10,6 +10,7 @@ double getHeight(BuildContext context) {
 }
 
 const all20 = EdgeInsets.all(20);
+const all30 = EdgeInsets.all(30);
 const symmetric_h4_v2 = EdgeInsets.symmetric(horizontal: 4, vertical: 2);
 const symmetric_h10 = EdgeInsets.symmetric(horizontal: 10);
 const symmetric_h15_v10 = EdgeInsets.symmetric(horizontal: 15, vertical: 10);
@@ -50,7 +51,9 @@ const gap_h10 = SizedBox(width: 10);
 const gap_h50 = SizedBox(width: 50);
 
 // width + height
+const double size0 = 0;
 const double size30 = 30;
+const double size40 = 40;
 const double size50 = 50;
 const double size60 = 60;
 const double size70 = 70;

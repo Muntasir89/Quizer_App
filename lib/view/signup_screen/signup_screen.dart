@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+import 'package:quizer/core/constants/constants.dart';
+import 'package:quizer/core/values/text_style.dart';
 
 import '../../core/assets/AppAssets.dart';
 import '../../core/colors/AppColor.dart';
@@ -41,87 +44,80 @@ class _SignupScreenState extends State<SignupScreen> {
       body: Container(
         height: h,
         width: w,
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [AppColor.backgroundTopCenter, AppColor.primaryColor],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter)),
+        alignment: Alignment.center,
+        padding: all30,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(AppAssets.bg), // Replace with your own image
+            fit: BoxFit.cover,
+            scale: 1.0,
+          ),
+        ),
         child: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ClipPath(
-                clipper: CustomShape(),
-                child: Container(
-                  height: h * 0.2,
-                  width: w,
-                  color: Colors.white,
-                ),
+              const Text(
+                signup,
+                style: style_white_w500_35,
               ),
-              Container(
-                width: w * 0.8,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    EditText(
-                        controller: _nameController,
-                        textType: 0,
-                        label: "Name"),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    EditText(
-                        controller: _emailController,
-                        textType: 1,
-                        label: "Email"),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    EditText(
-                        controller: _passwordController,
-                        textType: 2,
-                        label: "Password"),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    EditText(
-                        controller: _confirmPassController,
-                        textType: 2,
-                        label: "Confirm Password"),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    EditText(
-                        controller: _mobileNoController,
-                        textType: 3,
-                        label: "Mobile No"),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    Button(title: "Sign Up")
-                  ],
-                ),
+              gap_v20,
+              EditText(
+                controller: _nameController,
+                textType: 0,
+                label: name,
               ),
-              const SizedBox(
-                height: 30,
+              gap_v10,
+              EditText(
+                controller: _emailController,
+                textType: 1,
+                label: email,
+              ),
+              gap_v10,
+              EditText(
+                controller: _passwordController,
+                textType: 2,
+                label: password,
+              ),
+              gap_v10,
+              EditText(
+                controller: _confirmPassController,
+                textType: 2,
+                label: confirmPassword,
+              ),
+              gap_v10,
+              EditText(
+                controller: _mobileNoController,
+                textType: 3,
+                label: mobielNo,
+              ),
+              gap_v30,
+              ElevatedButton(
+                onPressed: () {
+                  context.goNamed(RouteName.homePage);
+                },
+                child: const Text(
+                  signup,
+                  style: style_black_w500_15,
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Already has an Account?",
+                  const Text(
+                    alreadyHasAccount,
                     style: TextStyle(color: AppColor.whiteColor),
                   ),
-                  const SizedBox(
-                    width: 0,
-                  ),
+                  gap_v5,
                   TextButton(
-                      onPressed: () {
-                        Get.offNamed(RouteName.loginPage);
-                      },
-                      child: Text(
-                        "Login",
-                        style: TextStyle(color: AppColor.redColor),
-                      ))
+                    onPressed: () {
+                      context.goNamed(RouteName.loginPage);
+                    },
+                    child: const Text(
+                      login,
+                      style: TextStyle(color: AppColor.redColor),
+                    ),
+                  )
                 ],
               )
             ],
@@ -129,30 +125,5 @@ class _SignupScreenState extends State<SignupScreen> {
         ),
       ),
     );
-  }
-}
-
-class CustomShape extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    double H = size.height;
-    double W = size.width;
-    double radius = size.width * 0.15;
-
-    Path path = Path();
-
-    path.lineTo(0, H);
-    path.quadraticBezierTo(0, H - radius, radius, H - radius);
-    path.lineTo(W - radius, H - radius);
-    path.quadraticBezierTo(W, H - radius, W, H - 2 * radius);
-    path.lineTo(W, 0);
-
-    return path;
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    // TODO: implement shouldReclip
-    throw false;
   }
 }

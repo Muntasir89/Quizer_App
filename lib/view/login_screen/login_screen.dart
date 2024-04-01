@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quizer/core/assets/AppAssets.dart';
 import 'package:quizer/core/colors/AppColor.dart';
 import 'package:quizer/core/constants/constants.dart';
 import 'package:quizer/core/values/app_values.dart';
 import 'package:quizer/core/routes/route_names.dart';
-import 'package:quizer/view/common_widgets/button.dart';
+import 'package:quizer/core/values/text_style.dart';
 import 'package:quizer/view/common_widgets/edit_text.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -36,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Container(
         height: h,
         width: w,
-        padding: const EdgeInsets.all(size30),
+        padding: all30,
         alignment: Alignment.center,
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -50,28 +49,28 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  EditText(
-                    controller: _emailController,
-                    textType: 1,
-                    label: email,
-                  ),
-                  gap_v10,
-                  EditText(
-                    controller: _passwordController,
-                    textType: 2,
-                    label: password,
-                  ),
-                  gap_v30,
-                  ElevatedButton(
-                    onPressed: () {
-                      context.goNamed(RouteName.homePage);
-                    },
-                    child: const Text(login),
-                  )
-                ],
+              const Text(
+                login,
+                style: style_white_w500_35,
+              ),
+              gap_v20,
+              EditText(
+                controller: _emailController,
+                textType: 1,
+                label: email,
+              ),
+              gap_v10,
+              EditText(
+                controller: _passwordController,
+                textType: 2,
+                label: password,
+              ),
+              gap_v30,
+              ElevatedButton(
+                onPressed: () {
+                  context.goNamed(RouteName.homePage);
+                },
+                child: const Text(login),
               ),
               gap_v10,
               const Text(
@@ -83,16 +82,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   SvgPicture.asset(
                     AppAssets.google,
-                    height: size50,
-                    width: size50,
+                    height: size40,
+                    width: size40,
                   ),
                   gap_h50,
                   IconButton(
                     onPressed: () {},
                     icon: SvgPicture.asset(
                       AppAssets.github,
-                      height: size50,
-                      width: size50,
+                      height: size40,
+                      width: size40,
                     ),
                   ),
                 ],
@@ -109,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Get.offNamed(RouteName.signupPage);
+                      context.goNamed(RouteName.signupPage);
                     },
                     child: const Text(
                       signup,
