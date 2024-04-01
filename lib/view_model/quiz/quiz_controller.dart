@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/routes/route_names.dart';
+import 'package:quizer/core/routes/route_names.dart';
 
 class QuizController extends GetxController
     with GetSingleTickerProviderStateMixin {

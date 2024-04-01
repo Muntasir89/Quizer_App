@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:quizer/res/routes/route_names.dart';
+import 'package:quizer/core/routes/route_names.dart';
 
 class SplashServices {
   final userdata = GetStorage();

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quizer/res/colors/AppColor.dart';
-import 'package:quizer/res/values/text_style.dart';
+import 'package:quizer/core/colors/AppColor.dart';
+import 'package:quizer/core/values/text_style.dart';
 
 class FilterableListItem extends StatelessWidget {
   final quizTitle, subject, time, Date;
@@ -20,13 +19,13 @@ class FilterableListItem extends StatelessWidget {
         horizontal: 15,
         vertical: 5,
       ),
-      margin: EdgeInsets.only(bottom: 10.h),
+      margin: EdgeInsets.only(bottom: 10),
       alignment: Alignment.center,
-      height: 80.h,
+      height: 80,
       decoration: BoxDecoration(
         color: AppColor.whiteColor.withOpacity(0.2),
         border: Border.all(width: 1, color: AppColor.secondaryTextColor),
-        borderRadius: BorderRadius.circular(30.r),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

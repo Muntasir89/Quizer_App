@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizer/res/colors/AppColor.dart';
+import 'package:quizer/core/colors/AppColor.dart';
 
 const style_grey_w400_13 = TextStyle(
   color: AppColor.secondaryTextColor,

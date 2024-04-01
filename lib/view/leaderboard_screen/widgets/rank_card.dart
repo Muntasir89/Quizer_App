@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:quizer/res/colors/AppColor.dart';
-import 'package:quizer/res/values/app_values.dart';
-import 'package:quizer/res/values/text_style.dart';
+import 'package:quizer/core/colors/AppColor.dart';
+import 'package:quizer/core/values/app_values.dart';
+import 'package:quizer/core/values/text_style.dart';
 
 class RankCard extends StatelessWidget {
   RankCard({super.key, required this.index, required this.name});

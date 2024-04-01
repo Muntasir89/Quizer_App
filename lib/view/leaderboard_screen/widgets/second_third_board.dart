@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../../../res/colors/AppColor.dart';
-import '../../../res/values/app_values.dart';
+import '../../../core/colors/AppColor.dart';
+import '../../../core/values/app_values.dart';
 
 class SecondThirdBoard extends StatelessWidget {
   const SecondThirdBoard({super.key});
@@ -14,8 +14,8 @@ class SecondThirdBoard extends StatelessWidget {
       children: [
         // Pillar ⬇️ board
         Container(
-          height: h120,
-          width: w70,
+          height: size120,
+          width: size70,
           margin: only_t55,
           decoration: BoxDecoration(
             color: AppColor.whiteColor_50,
@@ -24,8 +24,8 @@ class SecondThirdBoard extends StatelessWidget {
         ),
         // Circle ⬇️ image
         Container(
-          height: w50,
-          width: h50,
+          height: size50,
+          width: size50,
           margin: only_t25,
           decoration: BoxDecoration(
             color: AppColor.whiteColor,

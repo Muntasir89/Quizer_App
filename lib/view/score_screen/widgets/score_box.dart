@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:quizer/res/values/text_style.dart';
+import 'package:quizer/core/values/text_style.dart';
 
-import '../../../res/colors/AppColor.dart';
-import '../../../res/values/app_values.dart';
+import '../../../core/colors/AppColor.dart';
+import '../../../core/values/app_values.dart';
 
 class ScoreBox extends StatelessWidget {
   final Color color;

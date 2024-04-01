@@ -3,8 +3,8 @@ import 'package:quizer/view/leaderboard_screen/widgets/first_board.dart';
 import 'package:quizer/view/leaderboard_screen/widgets/rank_card.dart';
 import 'package:quizer/view/leaderboard_screen/widgets/second_third_board.dart';
 
-import '../../../res/colors/AppColor.dart';
-import '../../../res/values/app_values.dart';
+import '../../../core/colors/AppColor.dart';
+import '../../../core/values/app_values.dart';
 
 class RankingList extends StatelessWidget {
   const RankingList({

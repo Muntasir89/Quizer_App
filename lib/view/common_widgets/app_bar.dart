@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 
-import '../../res/colors/AppColor.dart';
+import '../../core/colors/AppColor.dart';
 
 class customAppBar extends StatelessWidget implements PreferredSizeWidget {
   final title;
@@ -24,7 +22,7 @@ class customAppBar extends StatelessWidget implements PreferredSizeWidget {
         title: Text(
           title,
           style: TextStyle(
-            fontSize: 25.sp,
+            fontSize: 25,
             color: AppColor.whiteColor,
             fontWeight: FontWeight.bold,
           ),

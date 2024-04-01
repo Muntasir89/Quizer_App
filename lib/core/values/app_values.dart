@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-final w = Get.width;
-final h = Get.height;
+double getWidth(BuildContext context) {
+  return MediaQuery.of(context).size.width;
+}
+
+double getHeight(BuildContext context) {
+  return MediaQuery.of(context).size.height;
+}
+
 const all20 = EdgeInsets.all(20);
 const symmetric_h4_v2 = EdgeInsets.symmetric(horizontal: 4, vertical: 2);
 const symmetric_h10 = EdgeInsets.symmetric(horizontal: 10);
@@ -41,15 +47,13 @@ const gap_v40 = SizedBox(height: 40);
 
 const gap_h5 = SizedBox(width: 5);
 const gap_h10 = SizedBox(width: 10);
+const gap_h50 = SizedBox(width: 50);
 
-// width
-const double w50 = 50;
-const double w60 = 60;
-const double w70 = 70;
-const double w80 = 80;
-
-// height
-const double h50 = 50;
-const double h60 = 60;
-const double h120 = 120;
-const double h150 = 150;
+// width + height
+const double size30 = 30;
+const double size50 = 50;
+const double size60 = 60;
+const double size70 = 70;
+const double size80 = 80;
+const double size120 = 120;
+const double size150 = 150;

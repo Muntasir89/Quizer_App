@@ -2,13 +2,13 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/colors/AppColor.dart';
-import 'package:quizer/res/values/text_style.dart';
+import 'package:quizer/core/colors/AppColor.dart';
+import 'package:quizer/core/values/text_style.dart';
 import 'package:quizer/view/quiz_screen/widgets/options.dart';
 import 'package:quizer/view_model/quiz/quiz_controller.dart';
 
-import '../../res/assets/AppAssets.dart';
-import '../../res/values/app_values.dart';
+import '../../core/assets/AppAssets.dart';
+import '../../core/values/app_values.dart';
 
 class QuizPage extends StatelessWidget {
   QuizPage({super.key});

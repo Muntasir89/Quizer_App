@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../../res/colors/AppColor.dart';
+import '../../../../core/colors/AppColor.dart';
 import '../../../../view_model/home/subject_dropdown/subjectDropDownController.dart';
 
 class SubjectHead extends StatelessWidget {
@@ -16,24 +15,24 @@ class SubjectHead extends StatelessWidget {
         onTap: () {
           Get.find<SubjectDropDownController>().startAniamation();
         },
-        borderRadius: BorderRadius.circular(25).r,
+        borderRadius: BorderRadius.circular(25),
         child: Container(
-          height: 45.h,
-          width: 216.w,
+          height: 45,
+          width: 216,
           decoration: BoxDecoration(
             color: AppColor.whiteColor.withOpacity(0.25),
-            border: Border.all(color: Colors.grey, width: 1.w),
-            borderRadius: BorderRadius.circular(25).r,
+            border: Border.all(color: Colors.grey, width: 1),
+            borderRadius: BorderRadius.circular(25),
           ),
-          constraints: BoxConstraints(minHeight: 45.h, minWidth: 216.w),
-          padding: EdgeInsets.symmetric(horizontal: 18.w),
+          constraints: BoxConstraints(minHeight: 45, minWidth: 216),
+          padding: EdgeInsets.symmetric(horizontal: 18),
           alignment: Alignment.center,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "Title",
-                style: TextStyle(fontSize: 18.sp, color: Colors.white),
+                style: TextStyle(fontSize: 18, color: Colors.white),
               ),
               Obx(
                 () => AnimatedRotation(

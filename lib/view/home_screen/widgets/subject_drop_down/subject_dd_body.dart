@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/colors/AppColor.dart';
+import 'package:quizer/core/colors/AppColor.dart';
 import 'package:quizer/view_model/home/subject_dropdown/subjectDropDownController.dart';
 
 class SubjectDropDownBody extends StatelessWidget {
@@ -28,22 +27,22 @@ class SubjectDropDownBody extends StatelessWidget {
                 },
                 borderRadius: (index == 0)
                     ? BorderRadius.only(
-                        topLeft: Radius.circular(25.r),
-                        topRight: Radius.circular(25.r))
+                        topLeft: Radius.circular(25),
+                        topRight: Radius.circular(25))
                     : (index == listItem.length - 1)
                         ? BorderRadius.only(
-                            bottomLeft: Radius.circular(25.r),
-                            bottomRight: Radius.circular(25.r))
+                            bottomLeft: Radius.circular(25),
+                            bottomRight: Radius.circular(25))
                         : null,
                 child: Container(
-                  height: 45.h,
-                  width: 216.w,
+                  height: 45,
+                  width: 216,
                   color: AppColor.primaryButtonColor,
                   alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.symmetric(horizontal: 18.h, vertical: 0),
+                  padding: EdgeInsets.symmetric(horizontal: 18, vertical: 0),
                   child: Text(
                     listItem.elementAt(index),
-                    style: TextStyle(fontSize: 18.sp, color: Colors.white),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                     // overflow: ,
                   ),
                 ),

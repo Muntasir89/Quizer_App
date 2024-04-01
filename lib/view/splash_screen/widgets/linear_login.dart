@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
-import 'package:quizer/res/colors/AppColor.dart';
+import 'package:quizer/core/colors/AppColor.dart';
 import 'package:simple_animations/animation_builder/loop_animation_builder.dart';
 
 class LinearLoading extends StatelessWidget {

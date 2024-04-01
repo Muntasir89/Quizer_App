@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/colors/AppColor.dart';
-import 'package:quizer/res/routes/route_names.dart';
-import 'package:quizer/res/values/text_style.dart';
+import 'package:quizer/core/colors/AppColor.dart';
+import 'package:quizer/core/routes/route_names.dart';
+import 'package:quizer/core/values/text_style.dart';
 import 'package:quizer/view/score_screen/widgets/score_box.dart';
 
-import '../../res/assets/AppAssets.dart';
-import '../../res/values/app_values.dart';
+import '../../core/assets/AppAssets.dart';
+import '../../core/values/app_values.dart';
 import '../../view_model/quiz/quiz_controller.dart';
 
 class ScorePage extends StatelessWidget {

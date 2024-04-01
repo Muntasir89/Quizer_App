@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../res/colors/AppColor.dart';
+import '../../../core/colors/AppColor.dart';
 
 class TimeDateQuizCard extends StatelessWidget {
   final timeDate;
@@ -13,7 +12,7 @@ class TimeDateQuizCard extends StatelessWidget {
       timeDate,
       textAlign: TextAlign.center,
       style: TextStyle(
-        fontSize: 10.sp,
+        fontSize: 10,
         fontWeight: FontWeight.bold,
         color: AppColor.blackColor,
       ),

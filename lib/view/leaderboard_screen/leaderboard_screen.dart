@@ -2,14 +2,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/colors/AppColor.dart';
-import 'package:quizer/res/values/app_values.dart';
+import 'package:quizer/core/colors/AppColor.dart';
+import 'package:quizer/core/values/app_values.dart';
 import 'package:quizer/view/leaderboard_screen/widgets/first_board.dart';
 import 'package:quizer/view/leaderboard_screen/widgets/ranking_list.dart';
 import 'package:quizer/view/leaderboard_screen/widgets/second_third_board.dart';
 
-import '../../res/assets/AppAssets.dart';
-import '../../res/values/text_style.dart';
+import '../../core/assets/AppAssets.dart';
+import '../../core/values/text_style.dart';
 
 class LeaderboardScreen extends StatelessWidget {
   const LeaderboardScreen({super.key});

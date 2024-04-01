@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:quizer/res/assets/AppAssets.dart';
+import 'package:quizer/core/assets/AppAssets.dart';
 
-import '../../../res/colors/AppColor.dart';
-import '../../../res/values/app_values.dart';
+import '../../../core/colors/AppColor.dart';
+import '../../../core/values/app_values.dart';
 
 class FirstBoard extends StatelessWidget {
   const FirstBoard({super.key});
@@ -22,8 +22,8 @@ class FirstBoard extends StatelessWidget {
         ),
         // Pillar ⬇️ board
         Container(
-          height: h150,
-          width: w80,
+          height: size150,
+          width: size80,
           margin: only_t55,
           decoration: BoxDecoration(
             color: AppColor.whiteColor_50,
@@ -32,8 +32,8 @@ class FirstBoard extends StatelessWidget {
         ),
         // Circle ⬇️ image
         Container(
-          height: w60,
-          width: h60,
+          height: size60,
+          width: size60,
           margin: only_t25,
           decoration: BoxDecoration(
             color: AppColor.whiteColor,

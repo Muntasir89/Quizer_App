@@ -2,23 +2,41 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../res/assets/AppAssets.dart';
-import '../../res/colors/AppColor.dart';
-import '../../res/values/app_values.dart';
-import '../../res/routes/route_names.dart';
+import '../../core/assets/AppAssets.dart';
+import '../../core/colors/AppColor.dart';
+import '../../core/values/app_values.dart';
+import '../../core/routes/route_names.dart';
 import '../common_widgets/button.dart';
 import '../common_widgets/edit_text.dart';
 
-class SignupScreen extends StatelessWidget {
+class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
 
   @override
+  State<SignupScreen> createState() => _SignupScreenState();
+}
+
+class _SignupScreenState extends State<SignupScreen> {
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _confirmPassController = TextEditingController();
+  final _mobileNoController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    _nameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmPassController.dispose();
+    _mobileNoController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final _nameController = TextEditingController();
-    final _emailController = TextEditingController();
-    final _passwordController = TextEditingController();
-    final _confirmPassController = TextEditingController();
-    final _mobileNoController = TextEditingController();
+    final h = getHeight(context);
+    final w = getWidth(context);
     return Scaffold(
       body: Container(
         height: h,

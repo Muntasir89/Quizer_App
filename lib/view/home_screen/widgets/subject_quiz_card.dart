@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../res/colors/AppColor.dart';
+import '../../../core/colors/AppColor.dart';
 
 class SubjectQuizCard extends StatelessWidget {
   final subject;
@@ -12,14 +11,14 @@ class SubjectQuizCard extends StatelessWidget {
     return Text(
       subject,
       style: TextStyle(
-          fontSize: 12.sp,
+          fontSize: 12,
           fontWeight: FontWeight.bold,
           color: AppColor.primaryColor,
           shadows: [
             Shadow(
               color: AppColor.primaryColor,
-              offset: Offset(0.w, 1.h),
-              blurRadius: 1.r,
+              offset: Offset(0, 1),
+              blurRadius: 1,
             )
           ]),
     );

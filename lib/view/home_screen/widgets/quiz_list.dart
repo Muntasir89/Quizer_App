@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quizer/res/colors/AppColor.dart';
+import 'package:quizer/core/colors/AppColor.dart';
 import 'package:quizer/view/home_screen/widgets/subject_quiz_card.dart';
 import 'package:quizer/view/home_screen/widgets/title_quiz_card.dart';
 import 'package:quizer/view/home_screen/widgets/timedate_quiz_card.dart';
@@ -20,23 +19,23 @@ class QuizList extends StatelessWidget {
 
     return Container(
       // color: Colors.amber,
-      height: 120.h,
+      height: 120,
       alignment: Alignment.center,
-      margin: EdgeInsets.only(bottom: 10.h),
+      margin: EdgeInsets.only(bottom: 10),
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           shrinkWrap: true,
           itemCount: 10,
-          padding: EdgeInsets.symmetric(vertical: 5.h),
+          padding: EdgeInsets.symmetric(vertical: 5),
           itemBuilder: (context, index) {
             return Container(
-              width: 170.w,
-              height: 110.h,
-              margin: EdgeInsets.symmetric(horizontal: 7.w),
-              padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 7.h),
-              //color: AppColor.whiteColor,
+              width: 170,
+              height: 110,
+              margin: EdgeInsets.symmetric(horizontal: 7),
+              padding: EdgeInsets.symmetric(horizontal: 7, vertical: 7),
+              //color: AppColorhiteColor,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18.r),
+                  borderRadius: BorderRadius.circular(18),
                   color: AppColor.whiteColor,
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -51,16 +50,16 @@ class QuizList extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                         color: AppColor.innerBoxShadowColor,
-                        offset: Offset(2.0.w, 2.0.h),
-                        blurRadius: 5.0.r,
-                        spreadRadius: 0.5.r),
+                        offset: Offset(2.0, 2.0),
+                        blurRadius: 5.0,
+                        spreadRadius: 0.5),
                   ]),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TitleQuizCard(title: "Quiz title"),
                   SizedBox(
-                    height: 10.h,
+                    height: 10,
                   ),
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

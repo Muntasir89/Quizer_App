@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:quizer/res/colors/AppColor.dart';
+import 'package:quizer/core/colors/AppColor.dart';
 
 class EditText extends StatelessWidget {
   final controller;

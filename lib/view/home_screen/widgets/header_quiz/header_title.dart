@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../res/colors/AppColor.dart';
+import '../../../../core/colors/AppColor.dart';
 
 class HeaderTitle extends StatelessWidget {
   final title;
@@ -14,7 +13,7 @@ class HeaderTitle extends StatelessWidget {
       style: TextStyle(
           backgroundColor: AppColor.whiteColor.withOpacity(0.25),
           color: AppColor.whiteColor,
-          fontSize: 25.sp,
+          fontSize: 25,
           fontWeight: FontWeight.w500),
     );
   }

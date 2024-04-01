@@ -1,17 +1,16 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/assets/AppAssets.dart';
-import 'package:quizer/res/colors/AppColor.dart';
+import 'package:quizer/core/assets/AppAssets.dart';
+import 'package:quizer/core/colors/AppColor.dart';
 import 'package:quizer/view/home_screen/widgets/header_quiz/viewAllBtn.dart';
 import 'package:quizer/view/home_screen/widgets/quiz_list.dart';
 import 'package:quizer/view/home_screen/widgets/subject_drop_down/subject_dd_body.dart';
 import 'package:quizer/view/home_screen/widgets/subject_drop_down/subject_head.dart';
 import 'package:quizer/view_model/home/bottomNavController/bottomNavController.dart';
 
-import '../../res/values/app_values.dart';
+import '../../core/values/app_values.dart';
 import 'widgets/filterable_list_item/filterable_list_item.dart';
 import 'widgets/header_quiz/header_title.dart';
 
@@ -25,14 +24,13 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       drawer: Drawer(),
       appBar: PreferredSize(
-        preferredSize:
-            Size.fromHeight(70.h), // Adjust the height of the app bar
+        preferredSize: Size.fromHeight(70), // Adjust the height of the app bar
         child: AppBar(
           backgroundColor: AppColor.whiteColor,
           elevation: 0,
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: w * 0.05),
+              padding: EdgeInsets.only(right: getWidth(context) * 0.05),
               child: IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset(
@@ -48,7 +46,7 @@ class HomeScreen extends StatelessWidget {
         () => CurvedNavigationBar(
           backgroundColor: Colors.transparent,
           color: AppColor.whiteColor,
-          height: 65.h,
+          height: 65,
           items: <Widget>[
             Icon(
               Icons.home,
@@ -78,15 +76,18 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 23.w, right: 23.w, top: 20.w),
-        decoration: BoxDecoration(
-            image: const DecorationImage(
-                image: AssetImage(AppAssets.bg), // Replace with your own image
-                fit: BoxFit.cover,
-                scale: 1.0),
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(25.r),
-                topRight: Radius.circular(25.r))),
+        padding: const EdgeInsets.only(left: 23, right: 23, top: 20),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(AppAssets.bg), // Replace with your own image
+            fit: BoxFit.cover,
+            scale: 1.0,
+          ),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -146,7 +147,7 @@ class HomeScreen extends StatelessWidget {
 // class CustomShape extends ContinuousRectangleBorder {
 //   @override
 //   Path getOuterPath(Rect rect, {TextDirection? textDirection}) {
-//     double H = AppBar().preferredSize.height + w * 0.18;
+//     double H = AppBar().preferredSize.height +getWidth(context)* 0.18;
 //     double W = w;
 //     double radius = W * 0.08;
 

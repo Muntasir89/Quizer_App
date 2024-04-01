@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/assets/AppAssets.dart';
-import 'package:quizer/res/routes/route_names.dart';
-import 'package:quizer/res/values/app_values.dart';
-import 'package:quizer/res/values/text_style.dart';
+import 'package:quizer/core/assets/AppAssets.dart';
+import 'package:quizer/core/routes/route_names.dart';
+import 'package:quizer/core/values/app_values.dart';
+import 'package:quizer/core/values/text_style.dart';
 import 'package:quizer/view/common_widgets/button.dart';
 
-import '../../res/colors/AppColor.dart';
+import '../../core/colors/AppColor.dart';
 
 class QuizDetailsPage extends StatelessWidget {
   const QuizDetailsPage({super.key});

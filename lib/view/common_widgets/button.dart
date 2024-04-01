@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:get/get.dart';
-import 'package:quizer/res/routes/route_names.dart';
+import 'package:quizer/core/routes/route_names.dart';
 
-import '../../res/colors/AppColor.dart';
-import '../../res/values/app_values.dart';
+import '../../core/colors/AppColor.dart';
+import '../../core/values/app_values.dart';
 
 class Button extends StatefulWidget {
   final title;
@@ -31,7 +31,7 @@ class _ButtonState extends State<Button> {
         });
       },
       child: AnimatedContainer(
-        width: w * 0.5,
+        width: getWidth(context) * 0.5,
         height: 50,
         // color: Colors.greenAccent,
         padding: const EdgeInsets.symmetric(vertical: 10),
