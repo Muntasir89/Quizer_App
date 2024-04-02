@@ -1,18 +1,19 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:quizer/core/assets/AppAssets.dart';
 import 'package:quizer/core/colors/AppColor.dart';
-import 'package:quizer/view/home_screen/widgets/header_quiz/viewAllBtn.dart';
+import 'package:quizer/core/constants/constants.dart';
+import 'package:quizer/core/values/text_style.dart';
+import 'package:quizer/view/home_screen/widgets/custom_dropdown.dart';
+import 'package:quizer/view/home_screen/widgets/viewAllBtn.dart';
 import 'package:quizer/view/home_screen/widgets/quiz_list.dart';
-import 'package:quizer/view/home_screen/widgets/subject_drop_down/subject_dd_body.dart';
-import 'package:quizer/view/home_screen/widgets/subject_drop_down/subject_head.dart';
-import 'package:quizer/view_model/home/bottomNavController/bottomNavController.dart';
 
 import '../../core/values/app_values.dart';
-import 'widgets/filterable_list_item/filterable_list_item.dart';
-import 'widgets/header_quiz/header_title.dart';
+import 'widgets/filterable_list_item.dart';
+import 'widgets/header_title.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -42,50 +43,46 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Obx(
-        () => CurvedNavigationBar(
-          backgroundColor: Colors.transparent,
-          color: AppColor.whiteColor,
-          height: 65,
-          items: <Widget>[
-            Icon(
-              Icons.home,
-              size: 30,
-              color: (Get.find<BottomNavController>().selectedIndex.value) == 0
-                  ? AppColor.primaryButtonColor
-                  : AppColor.secondaryTextColor,
-            ),
-            Icon(
-              Icons.leaderboard,
-              size: 30,
-              color: (Get.find<BottomNavController>().selectedIndex.value) == 1
-                  ? AppColor.primaryButtonColor
-                  : AppColor.secondaryTextColor,
-            ),
-            Icon(
-              Icons.person,
-              size: 30,
-              color: (Get.find<BottomNavController>().selectedIndex.value) == 2
-                  ? AppColor.primaryButtonColor
-                  : AppColor.secondaryTextColor,
-            ),
-          ],
-          onTap: (index) {
-            Get.find<BottomNavController>().onBottomNavItemTapped(index);
-          },
-        ),
-      ),
+      // bottomNavigationBar: Obx(
+      //   () => CurvedNavigationBar(
+      //     backgroundColor: Colors.transparent,
+      //     color: AppColor.whiteColor,
+      //     height: 65,
+      //     items: <Widget>[
+      //       Icon(
+      //         Icons.home,
+      //         size: 30,
+      //         // color: (Get.find<BottomNavController>().selectedIndex.value) == 0
+      //         //     ? AppColor.primaryButtonColor
+      //         //     : AppColor.secondaryTextColor,
+      //       ),
+      //       Icon(
+      //         Icons.leaderboard,
+      //         size: 30,
+      //         // color: (Get.find<BottomNavController>().selectedIndex.value) == 1
+      //         //     ? AppColor.primaryButtonColor
+      //         //     : AppColor.secondaryTextColor,
+      //       ),
+      //       Icon(
+      //         Icons.person,
+      //         size: 30,
+      //         // color: (Get.find<BottomNavController>().selectedIndex.value) == 2
+      //         //     ? AppColor.primaryButtonColor
+      //         //     : AppColor.secondaryTextColor,
+      //       ),
+      //     ],
+      //     onTap: (index) {
+      //       // Get.find<BottomNavController>().onBottomNavItemTapped(index);
+      //     },
+      //   ),
+      // ),
       body: Container(
-        padding: const EdgeInsets.only(left: 23, right: 23, top: 20),
+        padding: const EdgeInsets.only(left: 23, right: 23, top: 0),
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage(AppAssets.bg), // Replace with your own image
             fit: BoxFit.cover,
             scale: 1.0,
-          ),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(25),
-            topRight: Radius.circular(25),
           ),
         ),
         child: Column(
@@ -95,28 +92,38 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                HeaderTitle(title: "Upcoming Quizzes"),
-                ViewAllBtn(string: "View All", onPressed: upcomingViewAll)
+                const HeaderTitle(title: upcoming_quizes),
+                ViewAllBtn(string: view_all, onPressed: pressedToViewAll)
               ],
             ),
-            QuizList(type: "Upcoming"),
+            QuizList(type: upcoming),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                HeaderTitle(title: "Featured Quizzes"),
-                ViewAllBtn(string: "View All", onPressed: upcomingViewAll)
+                const HeaderTitle(title: featured_quizes),
+                ViewAllBtn(string: view_all, onPressed: pressedToViewAll)
               ],
             ),
-            QuizList(type: "Featured"),
+            QuizList(type: featured),
+            gap_v10,
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SubjectHead(),
-                ViewAllBtn(string: "View All", onPressed: upcomingViewAll),
+                CustomDropDown<String>(
+                  dropdownList: <String>[
+                    "dropdownItem1",
+                    "dropdownItem2",
+                    "dropdownItem3"
+                  ],
+                  onSelected: (String value) {
+                    print("selected value: ${value}");
+                  },
+                ),
+                ViewAllBtn(string: view_all, onPressed: pressedToViewAll),
               ],
             ),
-            SubjectDropDownBody(),
+            gap_v10,
             Expanded(
               child: SizedBox(
                 child: ListView.builder(
@@ -139,7 +146,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  void upcomingViewAll() {
+  void pressedToViewAll() {
     print("Upcoming Quiz view all pressed");
   }
 }

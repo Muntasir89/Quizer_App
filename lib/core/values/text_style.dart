@@ -49,6 +49,12 @@ const style_white_w500_15 = TextStyle(
   fontSize: 15,
 );
 
+const style_white_w500_18 = TextStyle(
+  color: AppColor.whiteColor,
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+);
+
 const style_white_w500_35 = TextStyle(
   color: AppColor.whiteColor,
   fontWeight: FontWeight.w500,

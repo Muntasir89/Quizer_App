@@ -28,12 +28,13 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       darkTheme: ThemeData(
-          brightness: Brightness.dark,
-          appBarTheme: const AppBarTheme(
-            centerTitle: true,
-            titleTextStyle: TextStyle(fontSize: 27),
-          ),
-          fontFamily: GoogleFonts.poppins().fontFamily),
+        brightness: Brightness.dark,
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          titleTextStyle: TextStyle(fontSize: 27),
+        ),
+        fontFamily: GoogleFonts.poppins().fontFamily,
+      ),
       // getPages: AppRoutes.appRoutes(),
     );
   }

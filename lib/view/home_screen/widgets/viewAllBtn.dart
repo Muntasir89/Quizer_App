@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../core/colors/AppColor.dart';
+import 'package:quizer/core/values/text_style.dart';
 
 class ViewAllBtn extends StatelessWidget {
   ViewAllBtn({required this.string, required this.onPressed, super.key});
@@ -11,14 +10,7 @@ class ViewAllBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: Text(
-        string,
-        style: TextStyle(
-            backgroundColor: AppColor.whiteColor.withOpacity(0.25),
-            color: AppColor.secondaryTextColor,
-            fontSize: 20,
-            fontWeight: FontWeight.w400),
-      ),
+      child: Text(string, style: style_grey_w500_15),
     );
   }
 }
